@@ -1,0 +1,96 @@
+* {
+box-sizing: border-box;}
+/*estilo do Body*/
+body{
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.anotacao {
+    background-color: rgb(1, 36, 86);
+    padding: 5px;
+    text-align: center;
+    color: aliceblue;
+}
+.cabecalho{
+    padding: 60px;
+    text-align: center;
+    background-image: url(../imagens/notebook.jpg);
+ background-size: cover;
+    color: aliceblue;
+}
+.barra_nav{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+/*Estilo dos links da barra de navegação*/
+.barra_nav a{
+    color: white;
+    padding: 14px 10px;
+text-decoration: none;
+text-align: center;
+}
+/*TROCAR A COR DE FUNDO QUANDO O CURSOR DO MOUSE ESTIVER SOBRE O LINK*/
+.barra_nav a:hover{
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+}
+.coluna{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Criar 2 colunas desiguais (30 e 70%)*/
+.lateral{
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.principal{
+    flex: 70%;
+    background-color:white;
+    padding: 20px;
+}
+/*imagens falsas apenas para marcação do espaço*/
+.imagem_falsa{
+    background-color: rgb(40, 0, 93);
+    width: 100;
+    padding: 20px;
+    height: 200px;
+    color:white;
+
+}
+.imagem_falsa2{
+    background-color: rgb(40, 0, 93);
+    width: 100;
+    padding: 20px;
+    height: 60px;
+    color:white;
+    margin-bottom: 5px;
+
+}
+.imagem_falsa3{
+    background-color: rgb(90, 6, 6);
+    width: 100;
+    padding: 20px;
+    height: 200px;
+    color:white;
+
+}
+.rodape{
+    max-height: fit-content;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(40, 0, 93);
+    color:#f1f1f1
+}
+@media screen and (max-width: 500px){
+    .coluna, .barra_nav{
+        flex-direction: column;
+    }
+    .cabecalho{
+        background-image: url(../imagens/celular.jpg);
+        background-size: cover;
+        color:#f1f1f1;
+    }
+}
