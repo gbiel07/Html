@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média</title>
+</head>
+<body>
+
+    <h2>Cálculo de Média</h2>
+
+    <input type="number" id="valor1" placeholder="Digite o primeiro número">
+    <input type="number" id="valor2" placeholder="Digite o segundo número">
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            let valor1 = document.getElementById("valor1").value;
+            let valor2 = document.getElementById("valor2").value;
+            let resultado = document.getElementById("resultado");
+
+            // validação
+            if (valor1 === "" || valor2 === "") {
+                resultado.innerHTML = "Preencha os dois valores!";
+                return;
+            }
+
+            let numero1 = Number(valor1);
+            let numero2 = Number(valor2);
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                resultado.innerHTML = "Digite apenas números!";
+                return;
+            }
+
+            let media = (numero1 + numero2) / 2;
+
+            resultado.innerHTML = "Média: " + media;
+        }
+    </script>
+
+</body>
+</html>
